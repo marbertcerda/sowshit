@@ -12,7 +12,7 @@ class InputTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        labelText: text,
+        hintText: text,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
         ),

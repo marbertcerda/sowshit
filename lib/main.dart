@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shit/views/AddTicketPage/addTicketPage.dart';
+import 'package:shit/views/settingPage/setting.dart';
 
 import 'views/home/home.dart';
 import 'views/home/login.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: const AddTicketPage(),
     );
   }
 }

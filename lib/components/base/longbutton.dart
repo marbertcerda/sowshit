@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 class LongButton extends StatelessWidget {
   const LongButton({
-    super.key,
+    Key? key,
     required this.text,
-  });
+    this.contentPadding = const EdgeInsets.symmetric(horizontal: 16),
+  }) : super(key: key);
 
   final String text;
+  final EdgeInsetsGeometry contentPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class LongButton extends StatelessWidget {
       onPressed: () {},
       style: FilledButton.styleFrom(
           backgroundColor: Colors.blue,
-          padding: const EdgeInsetsDirectional.fromSTEB(200, 16, 200, 16),
+          padding: contentPadding,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           )),
