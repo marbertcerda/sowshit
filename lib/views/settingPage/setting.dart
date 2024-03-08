@@ -1,80 +1,60 @@
 import 'package:flutter/material.dart';
-import 'package:shit/views/AddTicketPage/violationsListTile.dart';
+
+import '../../components/base/button.dart';
+import '../../components/base/buttonWithIcon.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
+  const SettingsPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 40),
-                    child: Icon(
-                      Icons.settings,
-                      size: 52,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 10,
-                      top: 4,
-                    ),
-                    child: Text(
-                      'Settings',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.normal,
-                        fontSize: 28,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Icon(
-                          Icons.more_vert,
-                          size: 52,
-                        ),
-                        // Icon on the right
-                      ],
-                    ),
-                  ),
-                ],
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 100, // Adjust the height of the app bar
+        title: const Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Icon(
+                Icons.settings,
+                size: 42, // Adjust size of the settings icon
+                color: Colors.black, // Change icon color to gray
               ),
-              SizedBox(height: 20), // Add spacing between rows
-              Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: 40), // Add left padding for the lock icon
-                    child: Icon(
-                      Icons.lock,
-                      size: 32,
-                    ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal:
-                              10), // Add horizontal padding for text input
-                      child: Text("Change password"),
-                    ),
-                  ),
-                  Icon(Icons.visibility), // Eye icon
-                ],
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                'Settings',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 28, // Adjust text size
+                ),
               ),
-            ],
-          ),
-        ],
+            ),
+            Spacer(), // Add spacer to push icons to the right
+            Padding(
+              padding: EdgeInsets.only(right: 20),
+              child: Icon(
+                Icons.more_vert,
+                size: 42, // Adjust size of the more_vert icon
+                color: Colors.black, // Change icon color to gray
+              ),
+            ),
+          ],
+        ),
+      ),
+      body: const Padding(
+        padding: EdgeInsets.all(20), // Add padding around the entire page
+        child: Column(
+          children: [
+            // Add your button widget here
+            Padding(
+              padding: EdgeInsets.all(20), // Add padding inside the button
+              child: Button2(name: 'asdasdasd'),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -51,10 +51,19 @@ class LoginPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                InputTextField(title: 'Email', text: 'email'),
-                InputTextField(title: 'Password', text: 'password'),
+                InputTextField(
+                  title: 'Email ',
+                  text: 'Type your email here ',
+                  leftIcon: Icons.email,
+                ),
+                InputTextField(
+                  title: 'Password',
+                  text: 'Type your password here',
+                  leftIcon: Icons.lock,
+                  rightIcon: Icons.remove_red_eye,
+                ),
                 SizedBox(height: 30),
-                Button()
+                Button(name: 'Login')
               ],
             ),
           ),

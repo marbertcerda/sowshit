@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shit/views/AddTicketPage/addTicketPage.dart';
 import 'package:shit/views/AddTicketPage/modal.dart';
+import 'package:shit/views/settingPage/changePass.dart';
 import 'package:shit/views/settingPage/setting.dart';
 
 import 'views/home/home.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // Change the home property to the desired screen
-      home: AddTicketPage(), // Example: changing to HomePage
+      home: LoginPage(), // Example: changing to HomePage
     );
   }
 }

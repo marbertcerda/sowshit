@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shit/components/base/longbutton.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:shit/components/forms/textfield.dart';
 import 'package:shit/views/AddTicketPage/modal.dart';
@@ -10,6 +9,21 @@ class AddTicketPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 100, // Adjust the height of the app bar
+        title: Padding(
+          padding:
+              EdgeInsets.fromLTRB(30, 60, 40, 20), // Add padding for all sides
+          child: Text(
+            'Add Ticket',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+            ),
+          ),
+        ),
+      ),
       body: Container(
         padding: const EdgeInsets.all(8.0),
         width: double.infinity,
@@ -28,12 +42,14 @@ class AddTicketPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   InputTextField(
-                      title: 'Identification', text: 'Enter identification'),
-                  InputTextField(title: 'firstname', text: 'firstname'),
-                  InputTextField(title: 'middlename', text: 'middlename'),
-                  InputTextField(title: 'lastname', text: 'lastname'),
-                  InputTextField(title: 'suffix', text: 'suffix'),
-                  InputTextField(title: 'birthday', text: 'birthday'),
+                    title: 'Identification',
+                    text: 'Enter identification',
+                  ),
+                  InputTextField(title: 'Firstname', text: 'Firstname'),
+                  InputTextField(title: 'Middlename', text: 'Middlename'),
+                  InputTextField(title: 'Lastname', text: 'Lastname'),
+                  InputTextField(title: 'Suffix', text: 'Suffix'),
+                  InputTextField(title: 'Birthday', text: 'Birthday'),
                 ],
               ),
             ),
@@ -42,13 +58,19 @@ class AddTicketPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InputTextField(title: 'Ticket Number', text: 'ticket number'),
-                  InputTextField(title: 'location', text: 'location'),
                   InputTextField(
-                      title: 'apprhending officer',
-                      text: 'apprehending officer'),
+                    title: 'Ticket Number',
+                    text: 'Ticket number',
+                  ),
+                  InputTextField(title: 'Location', text: 'Location'),
                   InputTextField(
-                      title: 'apprehension date', text: 'apprehension date'),
+                    title: 'Apprhending Officer',
+                    text: 'Apprehending Officer',
+                  ),
+                  InputTextField(
+                    title: 'Apprehension Date',
+                    text: 'Apprehension Date',
+                  ),
                 ],
               ),
             ),

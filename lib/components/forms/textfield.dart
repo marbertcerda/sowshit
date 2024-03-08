@@ -6,11 +6,15 @@ class InputTextField extends StatelessWidget {
     required this.title,
     required this.text,
     this.padding = const EdgeInsets.all(8.0),
+    this.leftIcon,
+    this.rightIcon,
   }) : super(key: key);
 
   final String title;
   final String text;
   final EdgeInsetsGeometry padding;
+  final IconData? leftIcon;
+  final IconData? rightIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +40,8 @@ class InputTextField extends StatelessWidget {
               ),
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
+              prefixIcon: leftIcon != null ? Icon(leftIcon) : null,
+              suffixIcon: rightIcon != null ? Icon(rightIcon) : null,
             ),
           ),
         ],
