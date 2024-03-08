@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shit/views/AddTicketPage/violationsPage.dart';
+import 'package:shit/views/AddTicketPage/violationsListTile.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -14,21 +14,18 @@ class SettingsPage extends StatelessWidget {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                // Align icons to the left and right
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(
-                        left: 40), // Add left padding for the settings icon
+                    padding: EdgeInsets.only(left: 40),
                     child: Icon(
                       Icons.settings,
-                      size: 52, // Increase size of the settings icon
+                      size: 52,
                     ),
                   ),
-                  // Icon on the left
                   Padding(
                     padding: EdgeInsets.only(
-                      left: 10, // Add left padding for the text
-                      top: 4, // Add top padding for better alignment
+                      left: 10,
+                      top: 4,
                     ),
                     child: Text(
                       'Settings',
@@ -45,7 +42,7 @@ class SettingsPage extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.more_vert,
-                          size: 52, // Increase size of the more_vert icon
+                          size: 52,
                         ),
                         // Icon on the right
                       ],

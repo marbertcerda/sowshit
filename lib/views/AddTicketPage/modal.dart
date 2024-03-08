@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shit/views/AddTicketPage/violationsPage.dart';
+import 'package:shit/views/AddTicketPage/violationsListTile.dart';
 
 class Modal extends StatelessWidget {
   const Modal({Key? key}) : super(key: key);
@@ -25,6 +25,18 @@ class Modal extends StatelessWidget {
                     child: const SingleChildScrollView(
                       child: Column(
                         children: [
+                          ViolationList(
+                            violationName: 'asdasd',
+                            fine: '2222',
+                          ),
+                          ViolationList(
+                            violationName: 'asdasd',
+                            fine: '2222',
+                          ),
+                          ViolationList(
+                            violationName: 'asdasd',
+                            fine: '2222',
+                          ),
                           ViolationList(
                             violationName: 'asdasd',
                             fine: '2222',

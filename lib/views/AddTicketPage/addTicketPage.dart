@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shit/components/base/longbutton.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:shit/components/forms/textfield.dart';
 import 'package:shit/views/AddTicketPage/modal.dart';
-import 'package:shit/views/AddTicketPage/ticketDetails.dart';
 
 class AddTicketPage extends StatelessWidget {
   const AddTicketPage({Key? key}) : super(key: key);
@@ -27,16 +27,13 @@ class AddTicketPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TicketdetailsListTile(
-                      titlename: 'First Name:', hinttext: 'Ex. John'),
-                  TicketdetailsListTile(
-                      titlename: 'Middle Name:', hinttext: 'Ex. Subasta'),
-                  TicketdetailsListTile(
-                      titlename: 'Last Name', hinttext: 'Ex. Valdez'),
-                  TicketdetailsListTile(
-                      titlename: 'Suffix', hinttext: 'Ex. jr.'),
-                  TicketdetailsListTile(
-                      titlename: 'Birthday', hinttext: 'Enter Birthday'),
+                  InputTextField(
+                      title: 'Identification', text: 'Enter identification'),
+                  InputTextField(title: 'firstname', text: 'firstname'),
+                  InputTextField(title: 'middlename', text: 'middlename'),
+                  InputTextField(title: 'lastname', text: 'lastname'),
+                  InputTextField(title: 'suffix', text: 'suffix'),
+                  InputTextField(title: 'birthday', text: 'birthday'),
                 ],
               ),
             ),
@@ -45,16 +42,13 @@ class AddTicketPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TicketdetailsListTile(
-                      titlename: 'Ticket No.', hinttext: 'Ex. 12313'),
-                  TicketdetailsListTile(
-                      titlename: 'Location',
-                      hinttext: 'Ex. Post 1, Magic Mall Annex'),
-                  TicketdetailsListTile(
-                      titlename: 'Apprehending Officer',
-                      hinttext: 'Ex. Prince Caba'),
-                  TicketdetailsListTile(
-                      titlename: 'Apprehension Date', hinttext: 'Enter Date'),
+                  InputTextField(title: 'Ticket Number', text: 'ticket number'),
+                  InputTextField(title: 'location', text: 'location'),
+                  InputTextField(
+                      title: 'apprhending officer',
+                      text: 'apprehending officer'),
+                  InputTextField(
+                      title: 'apprehension date', text: 'apprehension date'),
                 ],
               ),
             ),

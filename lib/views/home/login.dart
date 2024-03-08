@@ -51,30 +51,8 @@ class LoginPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 40),
-                Text(
-                  'Employee ID',
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                InputTextField(
-                  text: "Enter your employee ID",
-                ),
-                SizedBox(height: 20),
-                Text(
-                  'Password',
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                InputTextField(
-                  text: "Enter your password",
-                ),
+                InputTextField(title: 'Email', text: 'email'),
+                InputTextField(title: 'Password', text: 'password'),
                 SizedBox(height: 30),
                 Button()
               ],
