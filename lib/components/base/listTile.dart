@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TicketListTile extends StatelessWidget {
-  const TicketListTile({
+class ListTiles extends StatelessWidget {
+  const ListTiles({
     Key? key,
     required this.ticketNumber,
     required this.name,
@@ -13,17 +13,6 @@ class TicketListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('Ticket #$ticketNumber'),
-      subtitle: TextField(
-        decoration: InputDecoration(
-          hintText: 'Enter name',
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-          ),
-          contentPadding:
-              EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
-        ),
-      ),
-    );
+        title: Text('Ticket #$ticketNumber'), subtitle: Text('$name'));
   }
 }

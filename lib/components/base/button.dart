@@ -4,6 +4,8 @@ class Button extends StatelessWidget {
   const Button({super.key, this.width = 0});
   final double width;
 
+  get contentPadding => null;
+
   @override
   Widget build(BuildContext context) {
     double size = double.infinity;
@@ -13,9 +15,14 @@ class Button extends StatelessWidget {
     return SizedBox(
       width: size,
       child: FilledButton(
-        style: FilledButton.styleFrom(backgroundColor: Colors.blue),
+        style: FilledButton.styleFrom(
+            backgroundColor: Colors.purple[900],
+            padding: contentPadding,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            )),
         onPressed: () {},
-        child: Text("Asdasd"),
+        child: Text("Login"),
       ),
     );
   }

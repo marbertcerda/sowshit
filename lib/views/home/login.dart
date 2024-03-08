@@ -13,33 +13,34 @@ class LoginPage extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            color: Colors.blue,
+            color: Colors.blue[800],
             padding: const EdgeInsets.all(30.0),
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 50),
                 Text(
-                  'POSO ENFORCER',
+                  'POSO Traffic Enforcer',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 26,
+                    fontWeight: FontWeight.normal,
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 50),
                 Text(
                   'WELCOME!',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 48,
                   ),
                 ),
                 Text(
                   'Please login to continue',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 16,
                   ),
                 ),
               ],
@@ -48,15 +49,33 @@ class LoginPage extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.all(30.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: 40),
+                Text(
+                  'Employee ID',
+                  style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 InputTextField(
-                  text: "Email",
+                  text: "Enter your employee ID",
                 ),
                 SizedBox(height: 20),
-                InputTextField(
-                  text: "Password",
+                Text(
+                  'Password',
+                  style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                SizedBox(height: 20),
+                InputTextField(
+                  text: "Enter your password",
+                ),
+                SizedBox(height: 30),
                 Button()
               ],
             ),
