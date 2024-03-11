@@ -21,23 +21,15 @@ class _FooterState extends State<Footer> {
     switch (index) {
       case 0:
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => HomePage())); // Navigate to home page
+            context, MaterialPageRoute(builder: (context) => const HomePage()));
         break;
       case 1:
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    AttendancePage())); // Navigate to attendance page
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const AttendancePage()));
         break;
       case 2:
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    SettingsPage())); // Navigate to settings page
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const SettingsPage()));
         break;
     }
   }
@@ -45,7 +37,7 @@ class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.blue,
       ),
       child: BottomNavigationBar(
@@ -69,7 +61,7 @@ class _FooterState extends State<Footer> {
         unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
         selectedIconTheme:
-            IconThemeData(color: Colors.black), // Set selected icon color
+            const IconThemeData(color: Colors.black), // Set selected icon color
       ),
     );
   }

@@ -3,6 +3,7 @@ import 'package:shit/components/base/listTile.dart';
 
 import '../AddTicketPage/addTicketPage.dart'; // Adjust this import path as needed
 import 'package:shit/components/base/footer.dart';
+import 'package:shit/views/home/homeCard.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -143,7 +144,7 @@ class HomePage extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
         // Add the Footer widget here
-        bottomNavigationBar: Footer(),
+        bottomNavigationBar: const Footer(),
       ),
     );
   }
