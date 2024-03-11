@@ -7,7 +7,7 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
         child: AppBar(

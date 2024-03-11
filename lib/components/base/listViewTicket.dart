@@ -18,7 +18,7 @@ class ListViewTicket extends StatelessWidget {
         title: Text('$label'),
         subtitle: Padding(
           padding: const EdgeInsets.fromLTRB(
-              20, 20, 20, 20), // Adjust the padding as needed
+              60, 20, 20, 20), // Adjust the padding as needed
           child: Text(name),
         ),
       ),

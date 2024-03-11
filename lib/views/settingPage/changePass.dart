@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shit/components/base/appbar.dart';
 
 import '../../components/base/button.dart';
 import '../../components/forms/textfield.dart';
@@ -8,23 +9,14 @@ class ChangePasswordPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
-        child: AppBar(
-          backgroundColor: Colors.blue,
-          elevation: 0,
-          title: Row(
-            children: [
-              Text(
-                'Change Password',
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          ),
+        child: CustomAppbar(
+          name: 'change Password',
         ),
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(30), // Add padding around the entire page
         child: Column(
           children: [

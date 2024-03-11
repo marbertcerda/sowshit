@@ -62,7 +62,7 @@ class Button extends StatelessWidget {
               Icon(
                 rightIcon,
                 color: textColor, // Set icon color to editable text color
-              ), // Add right icon if provided
+              ),
           ],
         ),
       ),
