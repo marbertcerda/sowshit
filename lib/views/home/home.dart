@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shit/components/base/listTile.dart';
 
 import '../AddTicketPage/addTicketPage.dart'; // Adjust this import path as needed
+import 'package:shit/components/base/footer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -163,90 +164,8 @@ class HomePage extends StatelessWidget {
                         ticketNumber: '12312',
                         name: 'John Doe',
                       ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
-                      ListTiles(
-                        ticketNumber: '12312',
-                        name: 'John Doe',
-                      ),
+
+                      // Other ListTiles...
                     ],
                   ),
                 ),
@@ -264,6 +183,8 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.blue,
           child: const Icon(Icons.add),
         ),
+        // Add the Footer widget here
+        bottomNavigationBar: Footer(),
       ),
     );
   }
