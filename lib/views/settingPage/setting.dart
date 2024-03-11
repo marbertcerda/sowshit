@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shit/components/base/appbarIcon.dart';
 
 import 'changePassButton.dart';
 
@@ -7,31 +8,14 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
-        child: AppBar(
-          backgroundColor: Colors.blue,
-          elevation: 0,
-          title: Row(
-            children: [
-              Text(
-                'Settings',
-                style: TextStyle(color: Colors.white),
-              ),
-              Spacer(), // Add a spacer to push the icon to the right
-              IconButton(
-                onPressed: () {
-                  // Add your action here
-                },
-                icon: Icon(Icons.more_vert,
-                    color: Colors.white), // Use more_vert icon
-              ),
-            ],
-          ),
-        ),
-      ),
-      body: const Padding(
+          preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
+          child: CustomAppbarIcon(
+            name: 'Settings',
+            iconRight: Icons.more_vert,
+          )),
+      body: Padding(
         padding: EdgeInsets.all(20), // Add padding around the entire page
         child: Column(
           children: [

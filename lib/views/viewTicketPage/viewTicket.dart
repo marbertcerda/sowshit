@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:shit/components/base/appbar.dart';
 import 'package:shit/components/base/listViewTicket.dart';
 import 'package:shit/components/base/violationListView.dart';
-import 'package:shit/components/forms/textfield.dart';
-import 'package:shit/views/AddTicketPage/modal.dart';
 
 class ViewTicketPage extends StatelessWidget {
   const ViewTicketPage({Key? key}) : super(key: key);
@@ -11,18 +10,9 @@ class ViewTicketPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight + 8.0),
-        child: AppBar(
-          backgroundColor:
-              Colors.blue, // Make the AppBar background transparent
-          elevation: 0, // Remove AppBar shadow
-          title: const Text(
-            'View Ticket',
-            style: TextStyle(color: Colors.white), // Set text color to white
-          ),
-        ),
-      ),
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
+          child: CustomAppbar(name: 'View Ticket')),
       body: Container(
         padding: const EdgeInsets.all(8.0),
         width: double.infinity,
@@ -33,9 +23,9 @@ class ViewTicketPage extends StatelessWidget {
             Text('Ticket Details'),
             Text('Violations'),
           ],
-          views: [
+          views: const [
             // Wrap the view with Padding and provide padding
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,7 +39,7 @@ class ViewTicketPage extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,21 +54,15 @@ class ViewTicketPage extends StatelessWidget {
             ),
             // Wrap the view with Padding and provide padding
             Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                child: const Column(
-                  children: [
-                    ViolationListView(
-                        label: 'No Driver License', name: '12345'),
-                    ViolationListView(label: 'Illegal Parking', name: '12345'),
-                    ViolationListView(
-                        label: 'No Driver License', name: '12345'),
-                    ViolationListView(
-                        label: 'No Driver License', name: '12345'),
-                    ViolationListView(
-                        label: 'No Driver License', name: '12345'),
-                  ],
-                ),
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  ViolationListView(label: 'No Driver License', name: '12345'),
+                  ViolationListView(label: 'Illegal Parking', name: '12345'),
+                  ViolationListView(label: 'No Driver License', name: '12345'),
+                  ViolationListView(label: 'No Driver License', name: '12345'),
+                  ViolationListView(label: 'No Driver License', name: '12345'),
+                ],
               ),
             )
           ],

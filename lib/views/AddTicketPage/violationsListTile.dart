@@ -11,7 +11,7 @@ class ViolationList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(8.0), // Adjust the padding as needed
+      padding: const EdgeInsets.all(8.0), // Adjust the padding as needed
       child: TextButton(
         onPressed: () {
           // Add functionality here
@@ -20,13 +20,13 @@ class ViolationList extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                '$violationName',
+                violationName,
                 textAlign: TextAlign.left,
               ),
             ),
             Expanded(
               child: Text(
-                '$fine',
+                fine,
                 textAlign: TextAlign.center,
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:shit/components/base/appbar.dart';
 import 'package:shit/components/forms/textfield.dart';
 import 'package:shit/views/AddTicketPage/modal.dart';
 
@@ -9,17 +10,9 @@ class AddTicketPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight + 8.0),
-        child: AppBar(
-          backgroundColor:
-              Colors.blue, // Make the AppBar background transparent
-          elevation: 0, // Remove AppBar shadow
-          title: const Text(
-            'Add Ticket',
-            style: TextStyle(color: Colors.white), // Set text color to white
-          ),
-        ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
+        child: CustomAppbar(name: 'Add Ticket'),
       ),
       body: Container(
         padding: const EdgeInsets.all(8.0),

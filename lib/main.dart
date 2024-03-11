@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // Change the home property to the desired screen
-      home: HomePage(), // Example: changing to HomePage
+      home: const HomePage(), // Example: changing to HomePage
     );
   }
 }
