@@ -9,7 +9,8 @@ class Button extends StatelessWidget {
     this.rightIcon,
     this.textSize = 20.0, // Define default text size
     this.buttonHeight = 40.0, // Define default button height
-    this.buttonColor = Colors.purple, // Define default button color
+    this.buttonColor =
+        const Color.fromARGB(255, 21, 101, 192), // Define default button color
     this.textColor = Colors.white, // Define default text color
   }) : super(key: key);
 

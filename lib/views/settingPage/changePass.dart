@@ -9,30 +9,19 @@ class ChangePasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 100, // Adjust the height of the app bar
-        title: const Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 20),
-              child: Icon(
-                Icons.lock,
-                size: 42, // Adjust size of the settings icon
-                color: Colors.black, // Change icon color to gray
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
+        child: AppBar(
+          backgroundColor: Colors.blue,
+          elevation: 0,
+          title: Row(
+            children: [
+              Text(
                 'Change Password',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 28, // Adjust text size
-                ),
+                style: TextStyle(color: Colors.white),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: const Padding(

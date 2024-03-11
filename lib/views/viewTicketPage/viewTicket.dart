@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
+import 'package:shit/components/base/listViewTicket.dart';
+import 'package:shit/components/base/violationListView.dart';
 import 'package:shit/components/forms/textfield.dart';
 import 'package:shit/views/AddTicketPage/modal.dart';
 
-class AddTicketPage extends StatelessWidget {
-  const AddTicketPage({Key? key}) : super(key: key);
+class ViewTicketPage extends StatelessWidget {
+  const ViewTicketPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class AddTicketPage extends StatelessWidget {
               Colors.blue, // Make the AppBar background transparent
           elevation: 0, // Remove AppBar shadow
           title: const Text(
-            'Add Ticket',
+            'View Ticket',
             style: TextStyle(color: Colors.white), // Set text color to white
           ),
         ),
@@ -27,7 +29,7 @@ class AddTicketPage extends StatelessWidget {
         height: double.infinity,
         child: ContainedTabBarView(
           tabs: const [
-            Text('Violator Details'),
+            Text('Driver Details'),
             Text('Ticket Details'),
             Text('Violations'),
           ],
@@ -38,15 +40,12 @@ class AddTicketPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InputTextField(
-                    title: 'Identification',
-                    text: 'Enter identification',
-                  ),
-                  InputTextField(title: 'Firstname', text: 'Firstname'),
-                  InputTextField(title: 'Middlename', text: 'Middlename'),
-                  InputTextField(title: 'Lastname', text: 'Lastname'),
-                  InputTextField(title: 'Suffix', text: 'Suffix'),
-                  InputTextField(title: 'Birthday', text: 'Birthday'),
+                  ListViewTicket(label: 'Identification', name: '123452345'),
+                  ListViewTicket(label: 'Driver Name', name: '123452345'),
+                  ListViewTicket(label: 'Birthday', name: '123452345'),
+                  ListViewTicket(label: 'Address', name: '123452345'),
+                  ListViewTicket(label: 'Contact Number', name: '123452345'),
+                  ListViewTicket(label: 'Email Address', name: '123452345'),
                 ],
               ),
             ),
@@ -55,19 +54,11 @@ class AddTicketPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InputTextField(
-                    title: 'Ticket Number',
-                    text: 'Ticket number',
-                  ),
-                  InputTextField(title: 'Location', text: 'Location'),
-                  InputTextField(
-                    title: 'Apprhending Officer',
-                    text: 'Apprehending Officer',
-                  ),
-                  InputTextField(
-                    title: 'Apprehension Date',
-                    text: 'Apprehension Date',
-                  ),
+                  ListViewTicket(label: 'Ticket No.', name: '123452345'),
+                  ListViewTicket(label: 'Location', name: '123452345'),
+                  ListViewTicket(
+                      label: 'Apprehending Officer', name: '123452345'),
+                  ListViewTicket(label: 'Apprehension Name', name: '123452345'),
                 ],
               ),
             ),
@@ -76,7 +67,17 @@ class AddTicketPage extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Container(
                 child: const Column(
-                  children: [Modal()],
+                  children: [
+                    ViolationListView(
+                        label: 'No Driver License', name: '12345'),
+                    ViolationListView(label: 'Illegal Parking', name: '12345'),
+                    ViolationListView(
+                        label: 'No Driver License', name: '12345'),
+                    ViolationListView(
+                        label: 'No Driver License', name: '12345'),
+                    ViolationListView(
+                        label: 'No Driver License', name: '12345'),
+                  ],
                 ),
               ),
             )

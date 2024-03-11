@@ -22,63 +22,78 @@ class Modal extends StatelessWidget {
                   content: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.6,
-                    child: const SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Search violations...',
+                              prefixIcon: Icon(Icons.search),
+                            ),
                           ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
+                        ),
+                        Expanded(
+                          child: SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                                ViolationList(
+                                  violationName: 'asdasd',
+                                  fine: '2222',
+                                ),
+                              ],
+                            ),
                           ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                          ViolationList(
-                            violationName: 'asdasd',
-                            fine: '2222',
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 );

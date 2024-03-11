@@ -3,6 +3,8 @@ import 'package:shit/views/AddTicketPage/addTicketPage.dart';
 import 'package:shit/views/AddTicketPage/modal.dart';
 import 'package:shit/views/settingPage/changePass.dart';
 import 'package:shit/views/settingPage/setting.dart';
+import 'package:shit/views/viewTicketPage/historyTickets.dart';
+import 'package:shit/views/viewTicketPage/viewTicket.dart';
 
 import 'views/home/home.dart';
 import 'views/home/login.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // Change the home property to the desired screen
-      home: SettingsPage(), // Example: changing to HomePage
+      home: HomePage(), // Example: changing to HomePage
     );
   }
 }

@@ -8,39 +8,27 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 100, // Adjust the height of the app bar
-        title: const Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 20),
-              child: Icon(
-                Icons.settings,
-                size: 42, // Adjust size of the settings icon
-                color: Colors.black, // Change icon color to gray
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
+        child: AppBar(
+          backgroundColor: Colors.blue,
+          elevation: 0,
+          title: Row(
+            children: [
+              Text(
                 'Settings',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 28, // Adjust text size
-                ),
+                style: TextStyle(color: Colors.white),
               ),
-            ),
-            Spacer(), // Add spacer to push icons to the right
-            Padding(
-              padding: EdgeInsets.only(right: 20),
-              child: Icon(
-                Icons.more_vert,
-                size: 42, // Adjust size of the more_vert icon
-                color: Colors.black, // Change icon color to gray
+              Spacer(), // Add a spacer to push the icon to the right
+              IconButton(
+                onPressed: () {
+                  // Add your action here
+                },
+                icon: Icon(Icons.more_vert,
+                    color: Colors.white), // Use more_vert icon
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: const Padding(
