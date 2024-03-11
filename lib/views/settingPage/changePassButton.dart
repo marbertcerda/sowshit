@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:shit/views/settingPage/changePass.dart';
 
 class Button2 extends StatelessWidget {
-  const Button2({Key? key, required this.name, this.width = 0});
+  const Button2({
+    Key? key,
+    required this.name,
+    required this.iconLeft,
+    required this.iconRight,
+    this.width = 0,
+  }) : super(key: key);
 
   final double width;
   final String name;
+  final IconData iconLeft;
+  final IconData iconRight;
 
   @override
   Widget build(BuildContext context) {
@@ -15,39 +24,44 @@ class Button2 extends StatelessWidget {
     return SizedBox(
       width: size,
       child: ElevatedButton.icon(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ChangePasswordPage()),
+          );
+        },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(
               Colors.white), // Set background color to white
-          side: MaterialStateProperty.all<BorderSide>(
-              BorderSide(color: Colors.white54)), // Set border color to gray
+          side: MaterialStateProperty.all<BorderSide>(const BorderSide(
+              color: Colors.white54)), // Set border color to gray
           padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-              EdgeInsets.all(20)), // Add padding inside the button
+              const EdgeInsets.all(20)), // Add padding inside the button
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0), // Adjust radius
             ),
           ),
         ),
-        icon: const Icon(
-          Icons.lock,
-          size: 32, // Adjust size of the lock icon
-          color: Colors.grey, // Change icon color to gray
+        icon: Icon(
+          iconLeft,
+          size: 32, // Adjust size of the icon
+          color: Colors.black, // Change icon color to gray
         ),
         label: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Change Password',
-              style: TextStyle(
+              name,
+              style: const TextStyle(
                 fontSize: 18, // Adjust text size
-                color: Colors.grey, // Change text color to gray
+                color: Colors.black, // Change text color to gray
               ),
             ),
             Icon(
-              Icons.arrow_forward,
-              size: 32, // Adjust size of the arrow forward icon
-              color: Colors.grey, // Change icon color to gray
+              iconRight,
+              size: 32, // Adjust size of the icon
+              color: Colors.black, // Change icon color to gray
             ), // Arrow right icon
           ],
         ),

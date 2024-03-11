@@ -9,18 +9,13 @@ class AddTicketPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 100, // Adjust the height of the app bar
-        title: Padding(
-          padding:
-              EdgeInsets.fromLTRB(30, 60, 40, 20), // Add padding for all sides
-          child: Text(
-            'Add Ticket',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
-            ),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(
+            kToolbarHeight + 8.0), // Add extra height for padding
+        child: Padding(
+          padding: const EdgeInsets.all(8.0), // Add padding here
+          child: AppBar(
+            title: const Text('Add Ticket'),
           ),
         ),
       ),
@@ -78,13 +73,13 @@ class AddTicketPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
-                child: Column(
+                child: const Column(
                   children: [Modal()],
                 ),
               ),
             )
           ],
-          onChange: (index) => print(index),
+          onChange: (index) => (index),
         ),
       ),
     );

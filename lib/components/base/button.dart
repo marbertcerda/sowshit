@@ -33,7 +33,7 @@ class Button extends StatelessWidget {
       height: buttonHeight, // Set button height
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: buttonColor,
+          backgroundColor: buttonColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
@@ -47,7 +47,7 @@ class Button extends StatelessWidget {
                 leftIcon,
                 color: textColor, // Set icon color to editable text color
               ), // Add left icon if provided
-            SizedBox(width: 8), // Add space between icon and text
+            const SizedBox(width: 8), // Add space between icon and text
             Text(
               name,
               style: TextStyle(
@@ -56,7 +56,7 @@ class Button extends StatelessWidget {
                 fontSize: textSize, // Apply text size
               ),
             ),
-            SizedBox(width: 8), // Add space between text and icon
+            const SizedBox(width: 8), // Add space between text and icon
             if (rightIcon != null)
               Icon(
                 rightIcon,

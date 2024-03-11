@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shit/components/base/button.dart';
-import 'package:shit/components/base/longbutton.dart';
 import 'package:shit/components/forms/textfield.dart';
 
 class LoginPage extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shit/components/base/listTile.dart'; // Adjust this import path as needed
-import 'package:shit/components/base/longbutton.dart'; // Adjust this import path as needed
+import 'package:shit/components/base/listTile.dart';
+
+import '../AddTicketPage/addTicketPage.dart'; // Adjust this import path as needed
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,15 +27,9 @@ class HomePage extends StatelessWidget {
                       SizedBox(
                         height: 90,
                         width: 90,
-                        child: CircleAvatar(
-                          // Sample profile picture
-                          backgroundImage:
-                              AssetImage('assets/profile_pic_sample.png'),
-                        ),
+                        child: CircleAvatar(),
                       ),
-                      SizedBox(
-                          width:
-                              10), // Add some space between the profile picture and text
+                      SizedBox(width: 10),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -250,7 +245,12 @@ class HomePage extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AddTicketPage()),
+          );
+        },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../components/base/button.dart';
-import '../../components/base/buttonWithIcon.dart';
+import 'changePassButton.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({Key? key});
@@ -48,10 +47,13 @@ class SettingsPage extends StatelessWidget {
         padding: EdgeInsets.all(20), // Add padding around the entire page
         child: Column(
           children: [
-            // Add your button widget here
             Padding(
               padding: EdgeInsets.all(20), // Add padding inside the button
-              child: Button2(name: 'asdasdasd'),
+              child: Button2(
+                name: 'Change Password',
+                iconLeft: Icons.lock,
+                iconRight: Icons.arrow_forward,
+              ),
             ),
           ],
         ),

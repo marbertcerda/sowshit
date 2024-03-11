@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../components/base/button.dart';
-import '../../components/base/buttonWithIcon.dart';
 import '../../components/forms/textfield.dart';
 
 class ChangePasswordPage extends StatelessWidget {
@@ -36,8 +35,8 @@ class ChangePasswordPage extends StatelessWidget {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(30), // Add padding around the entire page
+      body: const Padding(
+        padding: EdgeInsets.all(30), // Add padding around the entire page
         child: Column(
           children: [
             // Add your text widget here
