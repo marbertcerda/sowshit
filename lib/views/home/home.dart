@@ -7,6 +7,7 @@ import 'package:shit/views/viewTicketPage/viewTicket.dart';
 
 import '../AddTicketPage/addTicketPage.dart'; // Adjust this import path as needed
 import 'package:shit/components/base/footer.dart';
+import 'package:shit/views/home/homeCard.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
