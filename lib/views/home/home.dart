@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shit/components/base/homeContainer.dart';
 import 'package:shit/components/base/listTile.dart';
+import 'package:shit/views/home/homeCard.dart';
+import 'package:shit/views/viewTicketPage/historyTickets.dart';
+import 'package:shit/views/viewTicketPage/viewTicket.dart';
 
 import '../AddTicketPage/addTicketPage.dart'; // Adjust this import path as needed
 import 'package:shit/components/base/footer.dart';
@@ -9,90 +13,37 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10), // Adjust the padding as needed
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(10), // Adjust the padding as needed
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.blue[800],
-                borderRadius: BorderRadius.circular(20),
-              ),
-              padding: const EdgeInsets.only(
-                top: 20,
-                left: 20,
-                right: 20,
-                bottom: 30,
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 90,
-                          width: 90,
-                          child: CircleAvatar(),
-                        ),
-                        SizedBox(width: 10),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Prince Gabriel Caba',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 24,
-                              ),
-                            ),
-                            Text(
-                              'Sample@gmail.com',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.normal,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 50),
-                  Text(
-                    'Post 1',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 48,
-                    ),
-                  ),
-                  Text(
-                    'Magic Mall Annex',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 16,
-                    ),
-                  ),
-                ],
-              ),
+            HeadContainer(
+              name: 'John Doe',
+              email: 'johnDoe@gmail.com',
+              postTitle: 'Post 1',
+              location: 'Magic Mall Annex',
+              showCircleAvatar: true,
+              borderRadius: BorderRadius.circular(20),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  HomeCard(title: 'Attendance'),
+                  HomeCard(title: 'Total Issued Tickets'),
                   Spacer(),
-                  HomeCard(title: 'History Tickets'),
+                  HomeCard(
+                    title: 'History Tickets',
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return const HistoryTicketPage();
+                        },
+                      ));
+                    },
+                  ),
                 ],
               ),
             ),
@@ -112,14 +63,25 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            const Expanded(
+            Expanded(
               child: Padding(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
                       // Replace with your actual data
                       ListTiles(
+                        ticketNumber: '12312',
+                        name: 'John Doe',
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return const ViewTicketPage();
+                            },
+                          ));
+                        },
+                      ),
+                      const ListTiles(
                         ticketNumber: '12312',
                         name: 'John Doe',
                       ),
@@ -132,19 +94,24 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
+      ),
+      floatingActionButton: ClipRRect(
+        borderRadius:
+            BorderRadius.circular(25), // Adjust the radius value as needed
+        child: FloatingActionButton(
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const AddTicketPage()),
             );
           },
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.blue[700],
           child: const Icon(Icons.add),
         ),
-        // Add the Footer widget here
-        bottomNavigationBar: Footer(),
       ),
+
+      // Add the Footer widget here
+      bottomNavigationBar: const Footer(),
     );
   }
 }

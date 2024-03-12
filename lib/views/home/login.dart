@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shit/components/base/button.dart';
+import 'package:shit/components/base/homeContainer.dart';
 import 'package:shit/components/forms/textfield.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,40 +11,10 @@ class LoginPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: double.infinity,
-            color: Colors.blue[800],
-            padding: const EdgeInsets.all(30.0),
-            child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'POSO Traffic Enforcer',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 26,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-                SizedBox(height: 50),
-                Text(
-                  'WELCOME!',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 48,
-                  ),
-                ),
-                Text(
-                  'Please login to continue',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
+          HeadContainer(
+            text1: 'POSO Traffic Enforcer',
+            text2: 'Welcome!',
+            text3: 'Please login to continue',
           ),
           const Padding(
             padding: EdgeInsets.all(30.0),

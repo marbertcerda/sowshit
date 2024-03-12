@@ -22,10 +22,10 @@ class Modal extends StatelessWidget {
                   content: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.6,
-                    child: Column(
+                    child: const Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: TextField(
                             decoration: InputDecoration(
                               hintText: 'Search violations...',

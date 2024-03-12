@@ -13,7 +13,7 @@ class ChangePasswordPage extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
         child: CustomAppbar(
-          name: 'change Password',
+          name: 'Change Password',
         ),
       ),
       body: Padding(

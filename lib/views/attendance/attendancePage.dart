@@ -8,35 +8,32 @@ class AttendancePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight + 8.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight + 8.0),
         child: AppBar(
           backgroundColor: Colors.blue,
           elevation: 0,
           title: Row(
             children: [
-              Text(
+              const Text(
                 'Attendance',
                 style: TextStyle(color: Colors.white),
               ),
-              Spacer(), // Add a spacer to push the icon to the right
+              const Spacer(), // Add a spacer to push the icon to the right
               IconButton(
                 onPressed: () {
                   // Add your action here
                 },
-                icon: Icon(Icons.more_vert,
+                icon: const Icon(Icons.more_vert,
                     color: Colors.white), // Use more_vert icon
               ),
             ],
           ),
         ),
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(20), // Add padding around the entire page
-        child: Column(
-          children: [],
-        ),
       ),
-      bottomNavigationBar: Footer(), // Add the Footer widget here
+      bottomNavigationBar: const Footer(), // Add the Footer widget here
     );
   }
 }

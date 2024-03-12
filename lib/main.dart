@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shit/views/AddTicketPage/addTicketPage.dart';
-import 'package:shit/views/AddTicketPage/modal.dart';
-import 'package:shit/views/settingPage/changePass.dart';
-import 'package:shit/views/settingPage/setting.dart';
 import 'package:shit/views/viewTicketPage/historyTickets.dart';
-import 'package:shit/views/viewTicketPage/viewTicket.dart';
-
 import 'views/home/home.dart';
 import 'views/home/login.dart';
 

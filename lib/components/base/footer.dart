@@ -66,7 +66,7 @@ class _FooterState extends State<Footer> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white, // Set unselected item color
         onTap: _onItemTapped,
         selectedIconTheme:
             IconThemeData(color: Colors.black), // Set selected icon color
